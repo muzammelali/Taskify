@@ -59,7 +59,7 @@ export default function Task() {
     setTask([...filteredTask]);
   }
   return (
-    <section className="mb-20" id="tasks">
+    <section className="mb-20 px-2.5 sm:px-0" id="tasks">
       {showAddModal && (
         <TaskAddModal
           addNewTask={handleAddEditTask}
