@@ -24,9 +24,9 @@ export default function TaskAddModal({ addNewTask, taskToEdit, onCloseClick }) {
   }
   return (
     <div
-      className={`bg-gray-50/70 top-0 left-0 w-full h-full fixed z-50 flex items-center justify-center overflow-auto`}
+      className={`bg-gray-50/70 top-0 left-0 w-full h-full fixed z-50 flex items-center justify-center transition-opacity duration-300`}
     >
-      <form className="mx-auto mb-10 mt-10 w-full max-w-[740px] rounded-xl border border-[#FEFBFB]/[36%] bg-[#191D26] p-9 max-md:px-4 lg:mb-10 lg:p-11">
+      <form className="mx-auto my-10 w-full max-w-[740px] rounded-xl border border-[#FEFBFB]/[36%] bg-[#191D26] p-9 max-md:px-4 lg:my-20 lg:p-11">
         <h2 className="mb-9 text-center text-2xl font-bold text-white lg:mb-11 lg:text-[28px]">
           {isAdd ? "Add New Task" : "Edit Task"}
         </h2>
@@ -37,7 +37,6 @@ export default function TaskAddModal({ addNewTask, taskToEdit, onCloseClick }) {
             <input
               className="block w-full rounded-md bg-[#2D323F] px-3 py-2.5"
               type="text"
-              placeholder="Enter task title"
               name="title"
               id="title"
               value={task.title}
@@ -51,7 +50,6 @@ export default function TaskAddModal({ addNewTask, taskToEdit, onCloseClick }) {
             <textarea
               className="block min-h-[120px] w-full rounded-md bg-[#2D323F] px-3 py-2.5 lg:min-h-[180px]"
               type="text"
-              placeholder="Enter task description"
               name="description"
               id="description"
               value={task.description}
@@ -64,9 +62,8 @@ export default function TaskAddModal({ addNewTask, taskToEdit, onCloseClick }) {
             <div className="space-y-2 lg:space-y-3">
               <label htmlFor="tags">Tags</label>
               <input
-                className="block w-full rounded-md bg-[#2D323F] px-3 py-2.5 placeholder:text-slate-400"
+                className="block w-full rounded-md bg-[#2D323F] px-3 py-2.5"
                 type="text"
-                placeholder="Separate tags with commas"
                 name="tags"
                 id="tags"
                 value={task.tags}
